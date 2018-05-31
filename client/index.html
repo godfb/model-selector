@@ -14,9 +14,8 @@
 
 <script>
 function myFunction(text) {
-    alert(text);
-    $.post("/buttonPressed", "left", function(data, status){
-        alert("Data: " + data + "\nStatus: " + status);
+    $.post("/buttonPressed", {name:text}, function(data, status){
+        // alert("Data: " + data + "\nStatus: " + status);
     });
 }
 </script>
